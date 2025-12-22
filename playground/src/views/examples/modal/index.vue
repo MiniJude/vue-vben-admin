@@ -57,6 +57,7 @@ const [FormModal, formModalApi] = useVbenModal({
 
 const [NestedModal, nestedModalApi] = useVbenModal({
   connectedComponent: NestedDemo,
+  destroyOnClose: true,
 });
 
 const [BlurModal, blurModalApi] = useVbenModal({
@@ -250,7 +251,13 @@ async function openPrompt() {
       </Card>
 
       <Card class="w-[300px]" title="嵌套弹窗示例">
-        <p>在已经打开的弹窗中再次打开弹窗</p>
+        <p>
+          复现
+          <a href="https://github.com/vbenjs/vue-vben-admin/pull/7035">
+            #7035
+          </a>
+          中描述的问题
+        </p>
         <template #actions>
           <Button type="primary" @click="openNestedModal">打开嵌套弹窗</Button>
         </template>
