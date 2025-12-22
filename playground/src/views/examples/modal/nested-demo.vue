@@ -4,7 +4,7 @@ import { useVbenModal } from '@vben/common-ui';
 import BaseChildDemo from './base-child-demo.vue';
 
 const [Modal] = useVbenModal({
-  // destroyOnClose: true,
+  destroyOnClose: true,
 });
 </script>
 <template>

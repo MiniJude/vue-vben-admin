@@ -3,7 +3,9 @@ import { useVbenModal } from '@vben/common-ui';
 
 import { Button } from 'ant-design-vue';
 
-const [Modal, modalApi] = useVbenModal();
+const [Modal, modalApi] = useVbenModal({
+  destroyOnClose: true,
+});
 
 function openNestedModal() {
   modalApi.open();
